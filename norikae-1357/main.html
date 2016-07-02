@@ -1,0 +1,15 @@
+
+<html>
+<body>
+  <form action="/" method="POST">
+    出発駅:
+    <select name="from_station">
+     {% for stations in station %}
+     <option value= {{ Name }} > {{ Name }} </option>　　ここで路線名だしたい
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　ここで駅名セレクトしたい
+     {% endfor %}
+   </select>
+   <hr />
+
+ </body>
+ </html>
