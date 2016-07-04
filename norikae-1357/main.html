@@ -5,7 +5,7 @@
     出発駅:
     <select name="from_station">
      {% for stations in station %}
-     <option value= {{ Name }} > {{ Name }} </option>　　ここで路線名だしたい
+     <option value= {{ stations['Name'] }} > {{ stations['Name'] }} </option>　　ここで路線名だしたい
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　ここで駅名セレクトしたい
      {% endfor %}
    </select>

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding: utf-8
 #
 # Copyright 2007 Google Inc.
 #
@@ -16,7 +17,7 @@
 #
 
 
-# coding: utf-8
+
 
 import cgi
 import webapp2

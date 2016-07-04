@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # Copyright 2007 Google Inc.
 #
@@ -15,13 +16,14 @@
 # limitations under the License.
 #
 
-# -*- coding: utf-8 -*-
+
 
 import os
 import webapp2
 import jinja2
 import logging
 import json
+import urllib
 from google.appengine.ext import ndb
 
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -37,10 +39,10 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-    	fp = urlopen("http://fantasy-transit.appspot.com/net?format=json")
-    	stations = json.dump(fp)
+    	fp = urllib.urlopen("http://fantasy-transit.appspot.com/net?format=json")
+    	stations = json.load(fp)
         values = {#ここでリストを辞書にして渡したい…どう渡せばよいのか…
-            'Name': 
+            'station': stations
         }
         self.render('main.html', values)
 
